@@ -210,10 +210,10 @@ nav a {
   align-self: center;
 }
 
-#skills .skill:hover {
-  background-color: #f1f1f1;
-  border-radius: 10px;
-}
+  #skills .skill:hover {
+    background-color: #f1f1f1;
+    border-radius: 10px;
+  }
 
 #skills .skill i {
   font-size: 10rem;
