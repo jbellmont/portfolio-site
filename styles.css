@@ -1,6 +1,7 @@
 * {
-  font-family: 'Work Sans', sans-serif;
+  font-family: 'Assistant', sans-serif;
   --grey: #333333;
+  --light-grey: #888888;
   color: var(--grey);
   scroll-behavior: smooth;
   margin: 0;
@@ -13,9 +14,23 @@ section {
 }
 
 section h1 {
+  font-family: 'Work Sans', sans-serif;
   font-size: 2rem;
   padding-bottom: 3%;
 }
+
+  section h1:hover {
+    animation-name: ani-h1-hover;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes ani-h1-hover {
+    0% {color: var(--grey);}
+    50% {color: var(--light-grey);}
+    100% {color: var(--grey);}
+  }
 
 section p {
   padding-bottom: 2.5%;
@@ -45,20 +60,46 @@ nav a {
   height: 100%;
 }
 
-nav a:hover {
-  background-color: #1a1a1a;
-}
+  nav a:hover {
+    animation-name: ani-nav-hover;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes ani-nav-hover {
+    0% {background-color: var(--grey);}
+    100% {background-color: black;}
+  }
+
 
 /* WELCOME SECTION */
 #welcome-section {
   height: 100vh;
   width: 100%;
-  --light-grey: #888888;
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 15%;
+  animation-name: ani-welcome-bcg;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
 }
+
+  @keyframes ani-welcome-bcg {
+    0% {background-color: white;}
+    30% {background-color: var(--light-grey);}
+    60% {background-color: var(--light-grey);}
+    90% {background-color: white;}
+  }
+
+  @keyframes ani-welcome-text {
+    0% {color: var(--grey);}
+    30% {color: white;}
+    60% {color: white;}
+    90% {color: var(--grey);}
+  }
+
 
 #welcome-item-1 {
   flex: 1;
@@ -68,11 +109,19 @@ nav a:hover {
 #welcome-item-1 h1 {
   font-size: 4rem;
   font-weight: lighter;
+  font-family: 'Work Sans', sans-serif;
+  animation-name: ani-welcome-text;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
 }
 
 #welcome-item-1 h2 {
   font-size: 2rem;
   font-weight: lighter;
+  font-family: 'Work Sans', sans-serif;
+  animation-name: ani-welcome-text;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
 }
 
 #welcome-item-2 {
@@ -81,14 +130,19 @@ nav a:hover {
   text-align: center;
 }
 
+#welcome-item-2 i {
+  animation-name: ani-welcome-text;
+  animation-duration: 8s;
+  animation-iteration-count: 1;
+}
+
 
 /* About */
 #about {
   background-color: #f1f1f1;
-  height: 100vh;
 }
 
-#about ul {
+#about ul { /* Soft skills box */
   padding: 2% 1% 2% 8%;
   font-weight: 400;
   background-color: white;
@@ -96,7 +150,19 @@ nav a:hover {
   margin-bottom: 2.5%;
 }
 
-#about li {
+  @keyframes ani-box-shadow {
+    0% {box-shadow: 0;}
+    100% {box-shadow: var(--light-grey) 5px 5px 10px}
+  }
+
+  #about ul:hover {
+    animation-name: ani-box-shadow;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+  }
+
+
+#about li { /* Soft skills list */
   padding-bottom: 0%;
 }
 
@@ -105,8 +171,8 @@ nav a:hover {
   color: white;
   padding: 10px;
   text-decoration: none;
-  width: 100%;
   border-radius: 5px;
+  font-size: 1.2rem;
 }
 
 #profile-link i {
@@ -115,8 +181,15 @@ nav a:hover {
 
 #github-link {
   text-align: center;
-  margin-top: 10px;
+  padding: 2% 0% 5% 0%;
 }
+
+  #profile-link:hover {    
+    animation-name: ani-nav-hover;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+  }
 
 
 /* Skills */
@@ -287,27 +360,28 @@ footer {
   display: flex;
   background-color: #f1f1f1;
   height: 100px;
-  line-height: 100px;
   text-align: center;
   font-weight: bold;
-}
-
-.footer-item-name {
-  flex: 1;
-  font-size: 1.2rem;
+  align-items: stretch;
 }
 
 .footer-item-link {
   flex: 1;
+  line-height: 100px;
 }
 
   .footer-item-link a {
-    height: 100%;
     display: block;
     text-decoration: none;
+    height: 100%;
   }
 
   .footer-item-link a:hover {
     background-color: var(--grey);
     color: white;
   }
+
+.footer-item-link-up {
+  font-size: 3rem;
+  padding-top: 7%;
+}
