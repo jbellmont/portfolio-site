@@ -1,7 +1,7 @@
 /* --------- GENERAL STYLES --------- */
 
 * {
-  font-family: 'Khula', sans-serif;
+  font-family: 'DM Sans', sans-serif;
   --grey: #333333;
   --light-grey: #888888;
   color: var(--grey);
@@ -12,13 +12,13 @@
 }
 
 section {
-  padding: 5% 15% 0% 15%;
+  padding: 150px 15% 150px 15%;
 }
 
 section h1 {
-  font-family: 'Work Sans', sans-serif;
-  font-size: 2rem;
-  padding-bottom: 3%;
+  font-size: 3rem;
+  padding-bottom: 25px;
+  text-align: center;
 }
 
   section h1:hover {
@@ -34,10 +34,16 @@ section h1 {
     100% {color: var(--grey);}
   }
 
+  section h2 {
+    text-align: center;
+  }
+
 section p {
-  padding-bottom: 2.5%;
+  padding-bottom: 25px;
+  line-height: 2rem;
   font-weight: 300;
-  font-size: 1.1rem;
+  font-size: 1.3rem;
+  text-align: center;
 }
 
 /* General styles - mobile */
@@ -52,6 +58,7 @@ section p {
 
 #navbar {
   background-color: var(--grey);
+  font-weight: 700;
   opacity: 0.9;
   display: flex;
   align-items: center;
@@ -132,18 +139,16 @@ section p {
 
 #welcome-item-1 h1 {
   font-size: 4rem;
-  font-weight: lighter;
-  font-family: 'Work Sans', sans-serif;
   animation-name: ani-welcome-text;
   animation-duration: 8s;
   animation-iteration-count: 1;
   animation-delay: 2s;
+  padding-bottom: 5px;
 }
 
 #welcome-item-1 h2 {
   font-size: 2rem;
   font-weight: lighter;
-  font-family: 'Work Sans', sans-serif;
   animation-name: ani-welcome-text;
   animation-duration: 8s;
   animation-iteration-count: 1;
@@ -167,7 +172,7 @@ section p {
 @media (max-width: 700px) {
   #welcome-section {
     flex-direction: column;
-    padding: 50% 0% 0% 0%;
+    padding: 40% 0% 0% 0%;
   }
 
   #welcome-item-1 {
@@ -194,26 +199,6 @@ section p {
   background-color: #f1f1f1;
 }
 
-#about ul { /* Soft skills box */
-  padding: 2% 1% 2% 8%;
-  font-weight: 400;
-  background-color: white;
-  border-left: solid lightgrey 5px;
-  margin-bottom: 2.5%;
-}
-
-  @keyframes ani-box-shadow {
-    0% {box-shadow: 0;}
-    100% {box-shadow: var(--light-grey) 5px 5px 10px}
-  }
-
-  #about ul:hover {
-    animation-name: ani-box-shadow;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
-  }
-
-
 #about li { /* Soft skills list */
   padding-bottom: 0%;
 }
@@ -229,11 +214,11 @@ section p {
 
 #profile-link i {
   color: white;
+  margin-top: 35px;
 }
 
 #github-link {
   text-align: center;
-  padding: 2% 0% 5% 0%;
 }
 
   #profile-link:hover {    
@@ -271,21 +256,19 @@ section p {
 
 /* --------- SKILLS SECTION --------- */
 
-#skills {
-  height: 100vh;
-}
-
 #skills .skills-container {
   display: flex;
   height: 50vh;
   align-content: center;
+  background-color: rgba(255, 255, 0, 0.671);
 }
 
 #skills .skill {
   flex: 1;
   text-align: center;
-  font-size: 1.1rem;
+  font-size: 1rem;
   align-self: center;
+  background-color: rgba(255, 0, 0, 0.527);
 }
 
 /* SKILLS HOVER COLOUR ANIMATION */
@@ -378,10 +361,14 @@ section p {
 
 /* --------- PROJECTS SECTION --------- */
 
+
+@keyframes ani-box-shadow {
+  0% {box-shadow: 0;}
+  100% {box-shadow: var(--light-grey) 5px 5px 10px}
+}
+
 #projects {
   background-color: #f1f1f1;
-  padding-bottom: 10%;
-  
 }
 
 .project-tile { /* Container */
@@ -389,26 +376,29 @@ section p {
   border-left: solid lightgrey 5px;
   width: 100%;
   margin: auto;
-  display: flex;
-  margin-bottom: 7%;
-  margin-top: 1%;
+  margin-bottom: 100px;
+  padding: 50px 0 50px 0px;
 }
 
   .project-tile:hover {
     animation-name: ani-box-shadow;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
   }
 
 .project-image { /* Left item */
   flex: 1;
-  margin: auto;
   text-align: center;
+}
+
+.project-tile h1 {
+  font-size: 2rem;
+  padding: 10px 0 15% 0;
 }
 
 .project-image img {
   height: auto;
-  width: 80%;
+  width: 90%;
   border: solid lightgray 2px;
 }
 
@@ -429,39 +419,29 @@ section p {
   flex: 1;
 }
 
-.project-text h1 {
-  font-weight: 400;
-  font-size: 1.5rem;
-  padding: 7% 0% 5% 0%;
-}
-
 .project-text h2 {
-  font-size: 1.1rem;
-  padding-left: 1%;
-}
-
-.project-text h2 i {
-  font-size: 1rem;
-  padding-right: 0.5%;
+  font-size: 1.5rem;
+  padding: 10px;
 }
 
 .project-text p {
-  padding: 2% 10% 5% 5%;
-
+  font-size: 1rem;
+  padding: 25px;
 }
 .project-text i { /* Skill icon */
-  font-size: 3rem;
+  font-size: 5rem;
 }
 
 .project-text .skills-container {
   display: flex;
+  padding: 25px;
+
 }
 
 .project-text .skill {
   flex: 1;
   text-align: center;
   font-size: 1.1rem;
-  padding: 5%;
 }
 
 
@@ -515,6 +495,7 @@ section p {
   height: 2.5rem;
   border: solid lightgray 2px;
   border-radius: 2px;
+  padding-left: 10px;
 }
 
 #message {
@@ -522,6 +503,8 @@ section p {
   border: solid lightgray 2px;
   border-radius: 2px;
   font-size: 1rem;
+  padding-left: 10px;
+
 }
 
 #submit {
@@ -540,6 +523,7 @@ section p {
     animation-duration: 1s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+    cursor: pointer;
   }
 
 #submit i {
