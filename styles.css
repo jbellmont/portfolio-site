@@ -15,7 +15,7 @@ section {
   padding: 150px 15% 150px 15%;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 680px) {
   section {
     padding: 75px 7.5% 75px 7.5%;
   }
@@ -236,6 +236,10 @@ section p {
   background-color: #f1f1f1;
 }
 
+#about p {
+  text-align: left;
+}
+
 #profile-link {
   background-color: var(--grey);
   color: white;
@@ -251,6 +255,10 @@ section p {
 }
 
 #github-link {
+  text-align: center;
+}
+
+#about #github-link {
   text-align: center;
 }
 
@@ -284,6 +292,7 @@ section p {
     padding: 0 !important;
     margin: 0 !important;
   }
+
 }
 
 
@@ -391,9 +400,6 @@ section p {
     padding: 0 0 25px 0px;
   }
 
-  #skills .skill {
-    padding-bottom: 20px;
-  }
   #skills .skill i {
     font-size: 7rem;
   }
