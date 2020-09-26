@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jack Bellmont - Front End Developer</title>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="./css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/b4895fab6a.js" crossorigin="anonymous"></script>
 </head>
@@ -21,45 +21,52 @@
 
 <!--------- WELCOME --------->
 <section id="welcome-section" >
-  <div id="welcome-item-1">
+  <div id="welcome-text">
     <h1>Jack Bellmont</h1>
     <h2>Front End Developer</h2>
-  </div>
-  <div id="welcome-item-2">
-    <i class="fas fa-laptop-code"></i>
   </div>
 </section>
 
 <!--------- ABOUT --------->
 <section id="about">
-  <h1>About</h1>
-  <p>I am a passionate front end developer, skilled in HTML5, CSS3 and Python. 
-    These skills are built from self-development: taking online bootcamps, courses and reading 
-    documentation. </p>
-    
-  <p>The skills have been applied to real-world portfolio projects (see below); 
-    these focus on clean and responsive design and intuitive user interfaces - 
-    with accessibility always in mind.</p>
 
-  <p>I am currently work in digital advertising and marketing, having several years experience working 
+  <div class="section-to-fade-in about-sec">
+  <h1>About</h1>
+
+  <p>I am a passionate front end developer with an eye for design, skilled in modern Javascript 
+    (incl. ES6 and React.js), CSS (incl. SASS), HTML and Git version control.</p>
+  
+  <p>I currently work in digital advertising and marketing, having several years experience working 
     with international and national clients such as Bacardi, Lexus and the Co-op.
   </p>
+  
+  <p>I am looking to secure a Front End Developer position, where I can apply my core foundational 
+    skills in a commercial setting.</p>
 
-  <p>I wish to switch to a more technical path and become a Front End Developer, 
-    where I can apply my core foundational skills in a commercial setting.</p>
-  <p id="github-link"><a href="https://github.com/jbellmont/" id="profile-link" target="_blank" title="Go to Jack's Github profile"><i class="fab fa-github"></i> Github profile</a></p>
+  <p id="profile-buttons">
+    <a href="https://github.com/jbellmont/" class="profile-link" target="_blank" title="Go to Jack's Github profile">
+      <i class="fab fa-github"></i> Github profile
+    </a>
+    <a href="https://www.linkedin.com/in/jackbellmont/" class="profile-link" target="_blank" title="Go to Jack's LinkedIn profile">
+      <i class="fab fa-linkedin"></i> LinkedIn profile
+    </a>
+  </p>
+</div>
+
 </section>
 
 <!--------- SKILLS --------->
 <section id="skills">
-  <h1>Skills</h1>
-  <div class="skills-container">
-    <div class="skill red"><i class="fab fa-html5"></i><br>HTML</div>
-    <div class="skill yellow"><i class="fab fa-css3-alt"></i><br>CSS</div>
-    <div class="skill pink"><i class="fab fa-python"></i><br>Python</div>
-    <div class="skill blue"><i class="fab fa-js-square"></i><br>Javascript</div>
-    <div class="skill green">    <i class="fab fa-git-square"></i><br>Git</div>
-
+  <div class="section-to-fade-in skills-sec">
+    <h1>Skills</h1>
+    <div class="skills-container">
+      <div class="skill blue"><i class="fab fa-js-square"></i><br>Javascript</div>
+      <div class="skill blue"><i class="fab fa-react"></i><br>React.js</div>
+      <div class="skill red"><i class="fab fa-html5"></i><br>HTML</div>
+      <div class="skill yellow"><i class="fab fa-css3-alt"></i><br>CSS</div>
+      <div class="skill yellow"><i class="fab fa-sass"></i><br>SASS</div>
+      <div class="skill green">    <i class="fab fa-git-square"></i><br>Git</div>
+    </div>
   </div>
 </section>
 
@@ -67,6 +74,7 @@
 
 <!-- Product landing page - project -->
 <section id="projects">
+  <div class="section-to-fade-in projects-sec">
   <h1>Projects</h1>
   <div class="project-tile">
     <h2><a href="https://jbellmont.github.io/product-landing-page/" target="_blank" title="Go to the Github page of the Product Landing Page project">Product Landing Page</a></h2>
@@ -131,11 +139,13 @@
       </div>
     </div>
   </div>
+</div>
 
 </section>
 
 <!--------- CONTACT --------->
 <section id="contact">
+  <div class="section-to-fade-in contact-sec">
   <h1>Contact</h1>
   <form id="contact-container">
     <label for="name">Name</label></br> <input type="text" class="contact-input" id="name" name="name" placeholder="e.g. John Smith" required> </br>
@@ -143,6 +153,7 @@
     <label for="message">Message</label></br> <textarea class="contact-input" id="message" name="message" required placeholder="Message text"></textarea> </br>
     <button type="submit" id="submit">Submit <i class="fas fa-arrow-right"></i></button> 
   </form>
+</div>
 </section>
 
 <!--------- FOOTER --------->
@@ -161,6 +172,9 @@
   </div>
 
 </footer>
+
+<!-- Javascript -->
+<script src="./js/script.js"></script>
 
 </body>
 </html>

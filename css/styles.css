@@ -1,0 +1,510 @@
+/* --------- GENERAL STYLES --------- */
+* {
+  font-family: "DM Sans", sans-serif;
+  color: #333333;
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: default;
+}
+
+a {
+  cursor: pointer;
+}
+
+::selection {
+  background: none;
+  color: none;
+}
+
+section {
+  padding: 150px 15% 150px 15%;
+}
+section h1 {
+  font-size: 3rem;
+  padding-bottom: 25px;
+  text-align: center;
+}
+section h2 {
+  text-align: center;
+}
+section p {
+  padding-bottom: 25px;
+  line-height: 2rem;
+  font-weight: 300;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+@media (max-width: 680px) {
+  section {
+    padding: 75px 7.5% 75px 7.5%;
+  }
+}
+/* --------- NAV BAR --------- */
+#navbar {
+  background-color: #333333;
+  font-weight: 700;
+  opacity: 0.9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  position: fixed;
+  width: 100%;
+  z-index: 1001;
+}
+#navbar a {
+  text-decoration: none;
+  line-height: 50px;
+  color: white;
+  flex: 1;
+  text-align: center;
+  height: 100%;
+  transition: background-color 0.15s;
+}
+#navbar a:hover {
+  background-color: #000000;
+}
+
+/* Navbar - High-res */
+@media (min-width: 1440px) {
+  #navbar {
+    height: 50px;
+    font-size: 1.5rem;
+  }
+}
+/* Navbar - Mobile */
+@media (max-width: 700px) {
+  #navbar {
+    height: 35px;
+    font-size: 0.9rem;
+  }
+  #navbar a {
+    line-height: 37px;
+  }
+}
+/* --------- WELCOME SECTION --------- */
+#welcome-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15%;
+  background: linear-gradient(-45deg, #CCFFFF, #FFCCCC);
+  background-size: 200% 200%;
+  animation: background-shift 10s ease-in-out infinite;
+}
+
+@keyframes background-shift {
+  0% {
+    background-position: 0 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0 50%;
+  }
+}
+#welcome-text {
+  flex: 1;
+  text-align: center;
+  position: fixed;
+  z-index: 0;
+}
+#welcome-text h1 {
+  font-size: 4rem;
+  padding-bottom: 5px;
+}
+#welcome-text h2 {
+  font-size: 2rem;
+  font-weight: lighter;
+}
+
+/* Welcome - high-res screen */
+@media (min-width: 1440px) {
+  #welcome-text h1 {
+    font-size: 6rem;
+  }
+  #welcome-text h2 {
+    font-size: 3rem;
+  }
+}
+/* Welcome - tablet */
+@media (max-width: 768px) {
+  #welcome-text h1 {
+    font-size: 3rem;
+  }
+  #welcome-text h2 {
+    font-size: 1.5rem;
+  }
+}
+/* Welcome - mobile */
+@media (max-width: 425px) {
+  #welcome-section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #welcome-text {
+    flex: 2;
+  }
+  #welcome-text h1 {
+    font-size: 3rem;
+  }
+  #welcome-text h2 {
+    font-size: 1.5rem;
+  }
+}
+/* --------- ABOUT SECTION --------- */
+.section-to-fade-in {
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 1000;
+}
+
+.active {
+  opacity: 100;
+}
+
+#about {
+  background-color: #f1f1f1;
+  z-index: 1000;
+  position: relative;
+}
+#about p {
+  text-align: left;
+}
+#about #profile-buttons {
+  text-align: center;
+}
+#about #profile-buttons .profile-link {
+  background-color: #333333;
+  color: white;
+  padding: 10px;
+  margin: 0px 10px 0px 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+#about #profile-buttons .profile-link i {
+  color: white;
+  margin-top: 35px;
+}
+
+/* About - mobile */
+@media (max-width: 700px) {
+  #about {
+    padding-bottom: 75px;
+  }
+  #about h1 {
+    padding: 0 0 25px 0px;
+  }
+  #about p {
+    padding-bottom: 25px;
+  }
+  #about #profile-buttons {
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex;
+    flex-direction: column;
+  }
+  #about #profile-buttons .profile-link {
+    font-size: 1rem;
+    margin: 10px 0px 0px 0px;
+  }
+  #about #profile-buttons .profile-link i {
+    margin-top: 0;
+  }
+}
+/* --------- SKILLS SECTION --------- */
+#skills {
+  z-index: 1000;
+  position: relative;
+  background-color: #FFFFFF;
+}
+#skills .skills-container {
+  display: flex;
+  align-content: center;
+}
+#skills .skill {
+  flex: 1;
+  text-align: center;
+  font-size: 1rem;
+  align-self: center;
+}
+#skills .skill i {
+  /* Tech skill icon */
+  font-size: 10rem;
+}
+
+/* Skills - laptop, standard */
+@media (max-width: 1024px) {
+  #skills .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 250px;
+  }
+}
+/* Skills - mobile */
+@media (max-width: 768px) {
+  #skills .skills-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 200px;
+  }
+  #skills h1 {
+    padding: 0 0 25px 0px;
+  }
+  #skills .skill i {
+    font-size: 7rem;
+  }
+}
+/* --------- PROJECTS SECTION --------- */
+@keyframes ani-box-shadow {
+  0% {
+    box-shadow: 0;
+  }
+  100% {
+    box-shadow: var(--light-grey) 5px 5px 10px;
+  }
+}
+#projects {
+  background-color: #f1f1f1;
+  z-index: 1000;
+  position: relative;
+}
+
+.project-tile:nth-child(4) {
+  margin: 0;
+}
+
+.project-tile {
+  /* Container */
+  background-color: white;
+  border-left: solid lightgrey 5px;
+  margin-bottom: 100px;
+  padding: 50px 0 50px 0px;
+}
+
+.project-tile:hover {
+  animation-name: ani-box-shadow;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.project-tile h2 {
+  padding-bottom: 30px;
+  font-size: 2rem;
+}
+
+.project-image {
+  text-align: center;
+}
+
+.project-image img {
+  height: auto;
+  width: 80%;
+  border: solid lightgray 2px;
+}
+
+.project-links {
+  padding: 15px 0px 0px 0px;
+  font-size: 1.5rem;
+}
+
+.project-links a {
+  text-decoration: none;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+.project-tile h3 {
+  text-align: center;
+  padding-top: 60px;
+  font-size: 1.5rem;
+}
+
+.project-text p {
+  padding: 30px 10% 30px 10%;
+}
+
+.project-text .skills-container {
+  /* SKILL */
+  display: flex;
+  padding: 25px;
+}
+
+.project-text .skill {
+  /* SKILL */
+  flex: 1;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.project-text i {
+  /* SKILL */
+  font-size: 5rem;
+}
+
+/* Projects - tablet+mobile */
+@media (max-width: 768px) {
+  #projects h1 {
+    padding: 0 0 40px 0px;
+  }
+
+  .project-tile h2 {
+    padding: 0px 0px 50px 0;
+  }
+
+  .project-links {
+    font-size: 1rem;
+  }
+}
+/* Projects - increasing project tile size */
+@media (min-width: 768px) {
+  #projects {
+    background-color: #f1f1f1;
+  }
+}
+/* --------- CONTACT SECTION --------- */
+#contact {
+  z-index: 1000;
+  position: relative;
+  background-color: #FFFFFF;
+}
+
+#contact label {
+  font-size: 1.2rem;
+  margin: 5px 0px 5px 0px;
+}
+
+.contact-input {
+  margin-bottom: 2%;
+  width: 100%;
+}
+
+#name, #email {
+  font-size: 1rem;
+  height: 2.5rem;
+  border: solid lightgray 2px;
+  border-radius: 2px;
+  padding-left: 10px;
+}
+
+#message {
+  height: 5rem;
+  border: solid lightgray 2px;
+  border-radius: 2px;
+  font-size: 1rem;
+  padding-left: 10px;
+}
+
+#submit {
+  background-color: #333333;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  border: none;
+  width: 20%;
+}
+
+#submit:hover {
+  animation-name: ani-nav-hover;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  cursor: pointer;
+}
+
+#submit i {
+  font-size: 0.8rem;
+  color: white;
+}
+
+/* Contact - mobile */
+@media (max-width: 768px) {
+  #contact h1 {
+    padding: 0 0 25px 0px;
+  }
+
+  #name, #email, #message {
+    margin-bottom: 25px;
+  }
+
+  #submit {
+    font-size: 1rem;
+    width: 100px;
+  }
+}
+/* --------- FOOTER SECTION --------- */
+footer {
+  display: flex;
+  background-color: #f1f1f1;
+  height: 100px;
+  text-align: center;
+  align-items: stretch;
+}
+
+.footer-item-link {
+  flex: 1;
+}
+
+.footer-item-link a {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+}
+
+.footer-item-link a:hover {
+  animation: ani-footer-hover 0.5s 1;
+  animation-fill-mode: forwards;
+}
+
+.footer-item-link i {
+  width: 100%;
+  height: 100%;
+}
+
+.footer-item-link a i:hover {
+  animation: ani-footer-hover 0.5s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes ani-footer-hover {
+  0% {
+    background-color: #f1f1f1;
+  }
+  100% {
+    background-color: var(--grey);
+    color: white;
+  }
+}
+.footer-item-link-up {
+  font-size: 3rem;
+  padding-top: 7%;
+}
+
+/* Footer - mobile */
+@media (max-width: 768px) {
+  .footer-item-link-up {
+    font-size: 2rem;
+  }
+
+  footer {
+    height: 75px;
+  }
+
+  .footer-item-link-up {
+    padding-top: 22px;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
