@@ -13,6 +13,17 @@ a {
   cursor: pointer;
 }
 
+.section-to-fade-in {
+  opacity: 0;
+  transition: opacity 1s;
+  z-index: 9;
+  position: relative;
+}
+
+.active {
+  opacity: 100;
+}
+
 ::selection {
   background: none;
   color: none;
@@ -20,6 +31,8 @@ a {
 
 section {
   padding: 150px 15% 150px 15%;
+  z-index: 8;
+  position: relative;
 }
 section h1 {
   font-size: 3rem;
@@ -53,19 +66,23 @@ section p {
   height: 50px;
   position: fixed;
   width: 100%;
-  z-index: 1001;
+  z-index: 10;
 }
 #navbar a {
-  text-decoration: none;
   line-height: 50px;
   color: white;
   flex: 1;
   text-align: center;
   height: 100%;
-  transition: background-color 0.15s;
+  text-decoration: none;
+  background-image: linear-gradient(#888888, #888888);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 5px;
+  transition: background-size 0.3s;
 }
-#navbar a:hover {
-  background-color: #000000;
+#navbar a:hover, #navbar a:focus {
+  background-size: 100% 5px;
 }
 
 /* Navbar - High-res */
@@ -160,19 +177,9 @@ section p {
   }
 }
 /* --------- ABOUT SECTION --------- */
-.section-to-fade-in {
-  opacity: 0;
-  transition: opacity 1s;
-  z-index: 1000;
-}
-
-.active {
-  opacity: 100;
-}
-
 #about {
   background-color: #f1f1f1;
-  z-index: 1000;
+  z-index: 8;
   position: relative;
 }
 #about p {
@@ -189,10 +196,14 @@ section p {
   text-decoration: none;
   border-radius: 5px;
   font-size: 1.2rem;
+  transition: background-color 0.15s;
 }
 #about #profile-buttons .profile-link i {
   color: white;
   margin-top: 35px;
+}
+#about #profile-buttons .profile-link:hover {
+  background-color: #888888;
 }
 
 /* About - mobile */
@@ -222,13 +233,15 @@ section p {
 }
 /* --------- SKILLS SECTION --------- */
 #skills {
-  z-index: 1000;
+  z-index: 8;
   position: relative;
   background-color: #FFFFFF;
+  padding: 150px 0px 150px 0px;
 }
 #skills .skills-container {
   display: flex;
   align-content: center;
+  width: 100vw;
 }
 #skills .skill {
   flex: 1;
@@ -263,18 +276,10 @@ section p {
     font-size: 7rem;
   }
 }
-/* --------- PROJECTS SECTION --------- */
-@keyframes ani-box-shadow {
-  0% {
-    box-shadow: 0;
-  }
-  100% {
-    box-shadow: var(--light-grey) 5px 5px 10px;
-  }
-}
-#projects {
+/* --------- PORTFOLIO SECTION --------- */
+#portfolio {
   background-color: #f1f1f1;
-  z-index: 1000;
+  z-index: 8;
   position: relative;
 }
 
@@ -318,10 +323,15 @@ section p {
 
 .project-links a {
   text-decoration: none;
+  background-image: linear-gradient(#888888, #888888);
+  background-position: 50% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 3px;
+  transition: background-size 0.3s;
 }
 
-.project-links a:hover {
-  text-decoration: underline;
+.project-links a:hover, a:focus {
+  background-size: 100% 3px;
 }
 
 .project-tile h3 {
@@ -374,7 +384,7 @@ section p {
 }
 /* --------- CONTACT SECTION --------- */
 #contact {
-  z-index: 1000;
+  z-index: 8;
   position: relative;
   background-color: #FFFFFF;
 }
@@ -478,15 +488,6 @@ footer {
   animation-fill-mode: forwards;
 }
 
-@keyframes ani-footer-hover {
-  0% {
-    background-color: #f1f1f1;
-  }
-  100% {
-    background-color: var(--grey);
-    color: white;
-  }
-}
 .footer-item-link-up {
   font-size: 3rem;
   padding-top: 7%;

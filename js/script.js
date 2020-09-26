@@ -7,7 +7,7 @@ const appearOnScroll = () => {
     const ratio = () => {
       // Helps with when each section should fade in
       return section.contains(document.querySelector('.about-sec')) ? 1
-        : section.contains(document.querySelector('.skills-sec')) ? 0.5
+        : section.contains(document.querySelector('.skills-sec')) ? 0.5 //0.5
         : section.contains(document.querySelector('.projects-sec')) ? 2
         : 0.08
     };
