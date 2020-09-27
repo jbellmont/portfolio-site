@@ -282,46 +282,34 @@ section p {
   z-index: 8;
   position: relative;
 }
-
-.project-tile:nth-child(4) {
+#portfolio .project-tile:nth-child(4) {
   margin: 0;
 }
-
-.project-tile {
+#portfolio .project-tile {
   /* Container */
   background-color: white;
   border-left: solid lightgrey 5px;
   margin-bottom: 100px;
   padding: 50px 0 50px 0px;
+  transition: box-shadow 0.5s;
 }
-
-.project-tile:hover {
-  animation-name: ani-box-shadow;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
-.project-tile h2 {
+#portfolio .project-tile h2 {
   padding-bottom: 30px;
   font-size: 2rem;
 }
-
-.project-image {
+#portfolio .project-tile .project-image {
   text-align: center;
 }
-
-.project-image img {
+#portfolio .project-tile .project-image img {
   height: auto;
   width: 80%;
   border: solid lightgray 2px;
 }
-
-.project-links {
+#portfolio .project-tile .project-image .project-links {
   padding: 15px 0px 0px 0px;
   font-size: 1.5rem;
 }
-
-.project-links a {
+#portfolio .project-tile .project-image .project-links a {
   text-decoration: none;
   background-image: linear-gradient(#888888, #888888);
   background-position: 50% 100%;
@@ -329,37 +317,34 @@ section p {
   background-size: 0% 3px;
   transition: background-size 0.3s;
 }
-
-.project-links a:hover, a:focus {
+#portfolio .project-tile .project-image .project-links a:hover, #portfolio .project-tile .project-image .project-links a:focus {
   background-size: 100% 3px;
 }
-
-.project-tile h3 {
+#portfolio .project-tile .project-text h3 {
   text-align: center;
   padding-top: 60px;
   font-size: 1.5rem;
 }
-
-.project-text p {
+#portfolio .project-tile .project-text p {
   padding: 30px 10% 30px 10%;
 }
-
-.project-text .skills-container {
+#portfolio .project-tile .project-text .skills-container {
   /* SKILL */
   display: flex;
   padding: 25px;
 }
-
-.project-text .skill {
+#portfolio .project-tile .project-text .skills-container .skill {
   /* SKILL */
   flex: 1;
   text-align: center;
   font-size: 1.1rem;
 }
-
-.project-text i {
+#portfolio .project-tile .project-text .skills-container .skill i {
   /* SKILL */
   font-size: 5rem;
+}
+#portfolio .project-tile:hover {
+  box-shadow: #888888 0px 0px 10px;
 }
 
 /* Projects - tablet+mobile */
@@ -388,34 +373,29 @@ section p {
   position: relative;
   background-color: #FFFFFF;
 }
-
 #contact label {
   font-size: 1.2rem;
   margin: 5px 0px 5px 0px;
 }
-
-.contact-input {
+#contact .contact-input {
   margin-bottom: 2%;
   width: 100%;
 }
-
-#name, #email {
+#contact #name, #contact #email {
   font-size: 1rem;
   height: 2.5rem;
   border: solid lightgray 2px;
   border-radius: 2px;
   padding-left: 10px;
 }
-
-#message {
+#contact #message {
   height: 5rem;
   border: solid lightgray 2px;
   border-radius: 2px;
   font-size: 1rem;
-  padding-left: 10px;
+  padding: 8px 0px 0px 10px;
 }
-
-#submit {
+#contact #submit {
   background-color: #333333;
   color: white;
   padding: 10px;
@@ -424,19 +404,15 @@ section p {
   font-size: 1.2rem;
   border: none;
   width: 20%;
+  transition: background-color 0.15s;
 }
-
-#submit:hover {
-  animation-name: ani-nav-hover;
-  animation-duration: 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
-  cursor: pointer;
-}
-
-#submit i {
+#contact #submit i {
   font-size: 0.8rem;
   color: white;
+}
+#contact #submit:hover {
+  background-color: #888888;
+  cursor: pointer;
 }
 
 /* Contact - mobile */
@@ -462,33 +438,27 @@ footer {
   text-align: center;
   align-items: stretch;
 }
-
-.footer-item-link {
+footer .footer-item-link {
   flex: 1;
 }
-
-.footer-item-link a {
+footer .footer-item-link a {
   display: block;
   text-decoration: none;
   height: 100%;
+  transition: background-color 0.15s;
 }
-
-.footer-item-link a:hover {
-  animation: ani-footer-hover 0.5s 1;
-  animation-fill-mode: forwards;
-}
-
-.footer-item-link i {
+footer .footer-item-link i {
   width: 100%;
   height: 100%;
+  transition: color 0.15s;
 }
-
-.footer-item-link a i:hover {
-  animation: ani-footer-hover 0.5s 1;
-  animation-fill-mode: forwards;
+footer .footer-item-link i:hover {
+  color: #FFFFFF;
 }
-
-.footer-item-link-up {
+footer .footer-item-link a:hover {
+  background-color: #333333;
+}
+footer .footer-item-link-up {
   font-size: 3rem;
   padding-top: 7%;
 }

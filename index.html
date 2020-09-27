@@ -7,6 +7,17 @@
   <link rel="stylesheet" href="./css/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://kit.fontawesome.com/b4895fab6a.js" crossorigin="anonymous"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179126567-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-179126567-1');
+  </script>
+
 </head>
 
 <body>
@@ -74,7 +85,7 @@
 
 <section id="portfolio">
   <div class="section-to-fade-in projects-sec">
-  <h1>Projects</h1>
+  <h1>Portfolio</h1>
 
   <!-- Task List - project -->
   <div class="project-tile">
@@ -90,7 +101,6 @@
       <h3>Description</h3>
       <p>React.js Task List app. Features CRUD 'To Do list' functionality, with search bar to filter tasks,
         multiple sort types, and styled with Bootstrap CSS library. Responsive across all devices.</p>
-      </p>
       <h3>Technologies</h3>
       <div class="skills-container">
         <div class="skill red"><i class="fab fa-react"></i><br>React.js</div>
@@ -151,11 +161,11 @@
 <section id="contact">
   <div class="section-to-fade-in contact-sec">
   <h1>Contact</h1>
-  <form id="contact-container">
+  <form id="contact-container" action="https://formspree.io/meqpoekq" method="POST">
     <label for="name">Name</label></br> <input type="text" class="contact-input" id="name" name="name" placeholder="e.g. John Smith" required> </br>
-    <label for="email">Email</label></br> <input type="email" class="contact-input" id="email" name="email" placeholder="e.g. john.smith@email.com" required> </br>
+    <label for="email">Email</label></br> <input type="email" class="contact-input" id="email" name="_replyto" placeholder="e.g. john.smith@email.com" required> </br>
     <label for="message">Message</label></br> <textarea class="contact-input" id="message" name="message" required placeholder="Message text"></textarea> </br>
-    <button type="submit" id="submit">Submit <i class="fas fa-arrow-right"></i></button> 
+    <button type="submit" id="submit" value="send">Submit <i class="fas fa-arrow-right"></i></button> 
   </form>
 </div>
 </section>
