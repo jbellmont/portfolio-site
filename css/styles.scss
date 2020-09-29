@@ -382,32 +382,37 @@ section {
 
     .project-image { 
     text-align: center;
-  
+    display: flex;
+    justify-content: center;
+
       img {
-        height: auto;
-        width: 80%;
+        height: 275px;
+        margin: 5px;
         border: 
         solid lightgray 2px;
       }
 
-      .project-links {
-        padding: 15px 0px 0px 0px;
-        font-size: 1.5rem;
-  
-        a {
-          text-decoration: none;
-          background-image: linear-gradient($light-grey, $light-grey);
-          background-position: 50% 100%;
-          background-repeat: no-repeat;
-          background-size: 0% 3px;
-          transition: background-size .3s;  
-        }
+    }
 
-        a:hover, a:focus {
-          background-size: 100% 3px;
-        }
+    .project-links {
+      padding: 15px 0px 0px 0px;
+      font-size: 1.25rem;
+      text-align: center;
 
+      a {
+        text-decoration: none;
+        background-image: linear-gradient($light-grey, $light-grey);
+        background-position: 50% 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 3px;
+        transition: background-size .3s;  
       }
+
+      a:hover, a:focus {
+        background-size: 100% 3px;
+      }
+
+    }
   
     }
 
@@ -441,8 +446,6 @@ section {
       }
 
     }
-
-  }
 
   .project-tile:hover {
     box-shadow: $light-grey 0px 0px 10px;
