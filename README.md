@@ -1,17 +1,12 @@
-# [Portfolio site](https://jbellmont.github.io/portfolio-site/)
+# [Portfolio site](https://jackbellmont.com)
 
-https://jbellmont.github.io/portfolio-site/
+https://jackbellmont.com
 
-A responsive Porfolio site that houses my HTML and CSS projects. 
+A responsive Porfolio site that houses my Front End development projects.
 
-This project was undertaken as part of the "FreeCodeCamp - Responsive Web Design" course.
-
-## Objectives
-- Build a portfolio page using HTML5 and CSS3
-- Ensure it uses responsive design
-- Use flexbox, CSS grid and media queries
-- Meet the user stories criteria (https://www.freecodecamp.org/learn/responsive-web-design/responsive-web-design-projects/build-a-personal-portfolio-webpage) 
 
 ## Technologies used
+- Javascript
 - HTML5
-- CSS3 (incl. animations, flexbox, and grid)
+- CSS3
+- Google Analytics
